@@ -1,0 +1,43 @@
+<?php
+class Produto{
+  public $nome;
+  public $preco;
+  public $quanti;
+  public $pagar;
+ public $desc;
+  public function Produto($n,$p,$q){
+    $this->nome = $n;
+    $this->preco= $p;
+    $this-> quanti = $q;
+    $this->pagar = $this->preco * $this->quanti;
+      if($this->quanti >=11 and $this->quanti <=20){
+        $this->desc= "10%";
+        $desc = ($this->pagar*10)/100;
+        $this->pagar = $this->pagar - $desc;
+        
+      }
+      elseif($this->quanti >=21 and $this->quanti<=50){
+        $this->desc= "20%";
+        $desc = ($this->pagar*20)/100;
+        $this->pagar = $this->pagar - $desc;
+      }
+      elseif($this->quanti >50){
+        $this->desc= "25%";
+        $desc = ($this->pagar*25)/100;
+        $this->pagar = $this->pagar - $desc;
+      }
+      else{
+        $this->desc = 0;
+      }
+  }
+}
+$p1 = new Produto("Casaco",3.50,32
+);
+  print_r($p1);
+
+$p2 = new Produto("Calça",3.00,35);
+  print_r($p2);
+
+$p3 = new Produto("Cueca",6.00,50);
+  print_r($p3);
+  ?>
