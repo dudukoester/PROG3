@@ -1,0 +1,11 @@
+<?php
+echo("Automóvel ou carro é um veículo motorizado com rodas usado para transporte. A maioria das definições de carro diz que eles correm basicamente em estradas, acomodam de uma a oito pessoas, têm quatro pneus e, principalmente, transportam pessoas em vez de mercadorias.");
+echo("Substantivos: automóvel, carro, veículo, motorizado, rodas, transporte, estradas, oito, pessoas, quatro, pneus, mercadorias. ");
+echo("Verbos: é, usado, diz, correm, acomodam, têm, transportam.");
+
+echo("autómovel: transporta, anda, acelera, corre, freia");
+echo("carro: bate, consome, alimenta, limpa");
+echo("");
+echo("");
+
+?>
