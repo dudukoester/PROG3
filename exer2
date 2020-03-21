@@ -1,0 +1,68 @@
+<?php
+class Empregados{
+  public $primeironome;
+  public $sobrenome;
+  public $salariomensal;
+  public $salarioanual;
+
+  public function __construct(){
+    $this-> primeironome = "Maria";
+    $this-> sobrenome = "Silva";
+    $this-> salariomensal = 4000.00;
+  }
+  public function setPrimeironome($r){
+    return $this->primeironome = $r;
+  }
+  public function getPrimeironome(){
+    return $this ->primeironome;
+  }
+  public function setSobrenome($r1){
+    return $this->sobrenomenome = $r1;
+  }
+  public function getSobrenome(){
+    return $this ->sobrenome;
+  }
+  public function setSalariomensal($r2){
+    return $this->salariomensal = $r2;
+  }
+  public function getSalariomensal(){
+    return $this ->salariomensal;
+  }
+  public function setSalarioanual(){
+    
+    return $this->salarioanual = $this->salriomensal*12;
+  }
+  public function getSalarioanual(){
+    return $this ->salarioanual;
+  }
+  public function verSalariomensal(){
+    if($this->salriomensal < 0){
+      $this->salariomensal = 0.0;
+    }
+  }
+  public function aumentasalariomensal(){
+    $porc = ($this->salariomensal*10)/100;
+    $this-> salariomensal = $this->salariomensal + $porc;
+  }
+}
+
+$emp1 = new Empregados();
+$emp1->validaSalariomensal();
+$emp1->setSalarioanual();
+echo "O salario anual de {$emp1-> getPrimeironome()} {$emp1->getSobrenome()} é R$ {$emp1->getSalarioanual()}\n"; 
+$emp1 -> aumentasalariomensal();
+$emp1->setSalarioanual();
+echo "O salario anual de {$emp1-> getPrimeironome()} recebeu acrescimo de 10% e agora é de R$ {$emp1->getSalarioanual()} \n ";
+
+
+$emp2 = new Empregados();
+$emp2 -> setPrimeironome("Junior");
+$emp2 -> setSobrenome("da Silva");
+$emp2->setSalariomensal(1000);
+$emp2->validaSalmen();
+$emp2->setSalarioanual();
+echo "O salario anual de {$emp2-> getPrimeironome()}  {$emp2->getSobrenome()} é R$ {$emp2->getSalarioanual()} \n"; 
+$emp2 -> aumentasalariomensal();
+$emp2->setSalarioanual();
+echo "O salario anual de {$emp2-> getPrimeironome()} recebeu acrescimo de 10% e agora é de R$ {$emp2->getSalarioanual()} \n ";
+?>
