@@ -1,0 +1,42 @@
+<?php
+class Carro{
+  public $m;
+  public $velomax;
+  public $veloatual;
+
+public function Carro($m,$velm){
+  $this->7 = $m;
+  $this->velomax = $velm;
+  echo "{$this->setm()} \n";
+  $this->ligaCarro();
+  $this->acelera();
+  $this->reduzir();
+  $this->pararCarro();
+  $this->desligaCarro();
+}
+  public function ligaCarro(){
+      echo"Carro ligado \n";
+  }
+  public function desligaCarro(){
+    echo "Carro Desligado \n ";
+  }
+  public function acelera(){
+    $this->veloatual = $this->velolocidademax;
+    echo "Acelerando \nVelocidade = {$this->veloatual} km/h \n";
+  }
+  public function setm(){
+    return $this->m;
+  }
+  public function reduzir(){
+    $this->veloatual = $this->veloatual/2;
+    echo"Reduzindo velocidade! \nVelocidade = {$this->veloatual} km/h \n";
+  }
+  public function pararCarro(){
+    $this->veloatual = 0;
+    echo "Carro parado \nVelocidade = {$this->veloatual} km/h\n";
+  }
+
+}
+
+$c1 = new Carro("FERRARI",80);
+?>
